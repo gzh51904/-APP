@@ -1,0 +1,241 @@
+.app_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.4rem;
+    width: 100%;
+    height: 100%;
+
+    // 头部
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 0 .466667rem;
+        width: 100%;
+        height: 1.4rem;
+
+        .header_inner {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            .back {
+                position: absolute;
+                left: 0;
+                top: calc(50% - .226667rem);
+                width: .466667rem;
+                height: .466667rem;
+                text-align: center;
+                line-height: .466667rem;
+
+                i {
+                    font-size: .466667rem;
+                    color: #000;
+                }
+            }
+
+            .title {
+                height: .533333rem;
+                font-size: .453333rem;
+                color: #000;
+                line-height: .533333rem;
+            }
+        }
+
+    }
+
+
+    // main
+    .login_box {
+        padding: 0 .64rem;
+        width: 100%;
+        height: auto;
+
+        .login_form {
+            width: 100%;
+            // height: 2.666667rem;
+
+            // 手机
+            .phone {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                height: 1.613333rem;
+                border-bottom: .026667rem solid #efeff0;
+
+                .phone_icon {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 1.12rem;
+                    height: 100%;
+
+                    i {
+                        font-size: .573333rem;
+                        color: red;
+                    }
+                }
+
+                .phone_input {
+                    width: 5.333333rem;
+                    height: .666667rem;
+                    border: none;
+                    font-size: .4rem;
+                    color: #c1bbb9;
+                    line-height: .666667rem;
+                }
+
+                .phone_clear {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+                    width: .8rem;
+                    height: 100%;
+
+                    i {
+                        font-size: .44rem;
+                        color: #c1bbb9;
+                    }
+                }
+
+            }
+
+            // 密码
+            .psw {
+                margin-bottom: 1.093333rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                height: 1.613333rem;
+                border-bottom: .026667rem solid #efeff0;
+
+                .psw_icon {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 1.12rem;
+                    height: 100%;
+
+                    i {
+                        font-size: .573333rem;
+                        color: red;
+                    }
+                }
+
+                .psw_input {
+                    width: 5.333333rem;
+                    height: .666667rem;
+                    border: none;
+                    font-size: .4rem;
+                    color: #c1bbb9;
+                    line-height: .666667rem;
+                }
+
+                .psw_clear {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+                    width: .8rem;
+                    height: 100%;
+
+
+                    i {
+                        font-size: .44rem;
+                        color: #c1bbb9;
+                    }
+                }
+
+                .psw_show {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 1.4rem;
+
+                    i {
+                        font-size: .44rem;
+                        color: #c1bbb9;
+                    }
+
+                }
+
+            }
+
+            // 登录
+            .login_btn {
+                margin-bottom: .413333rem;
+                width: 100%;
+                height: 1.133333rem;
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: .133333rem;
+                    border: none;
+                    background: #e1e1e1;
+                    font-size: .346667rem;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 1.133333rem;
+
+                }
+
+            }
+
+            // 忘记密码 注册
+            .forget_psw {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: .8rem;
+
+                .forget_psw_link {
+                    font-size: .373333rem;
+                    color: #3493ff;
+                }
+
+                .register_link {
+                    font-size: .373333rem;
+                    color: #3493ff;
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+
+
+        }
+
+    }
+
+    // foot
+    .foot {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 .333333rem;
+
+        p {
+            font-size: .346667rem;
+            color: #bab3b1;
+            text-align: center;
+        }
+    }
+
+}

@@ -1,67 +1,96 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-// import logo from './logo.svg';
-import './App.css';
-// 1.引入路由
-import { HashRouter as Router, Route, Redirect, Switch } from "react-router-dom";
-import Home from './pages/Home/home';
-import Product from './pages/Product/product';
-import Discovery from './pages/Discovery/discovery';
-import Mine from './pages/Mine/mine';
-
-let AllRouter = {
-  Home,
-  Product,
-  Discovery,
-  Mine
-}
-
-class App extends React.Component {
+import React, { Component } from "react";
+import { Route, Switch, Redirect,withRouter} from "react-router-dom";
+import Home from "./pages/Home/index"; //首页
+import Product from "./pages/Product/index"; //产品
+import Discovery from "./pages/Discovery/index"; //发现
+import Mine from "./pages/Mine/index"; //我的
+import Login from "./pages/Login/index";
+import Register from "./pages/Register/index"; //注册
+import "./assets/css/base.css";
+import "./css/foot.scss";
+import "./assets/iconfont/iconfont.css";
+import "./App.css";
+class App extends Component {
   constructor() {
     super();
     this.state = {
+      currentItem:0,
       navs: [
         {
-          name: 'Home',
-          path: '/home',
-          // icon: 'home',
-          title: '首页'
+          id:0,
+          name: "Home",
+          path: "/home",
+          title: "首页",
+          icon:'iconfont iconxuanzhongshangcheng'
         },
         {
-          name: 'Product',
-          path: '/product',
-          // icon: 'bars',
-          title: '产品'
+          id:1,
+          name: "Product",
+          path: "/product",
+          title: "产品",
+          icon:'iconfont iconchanpinmoren'
         },
         {
-          name: 'Discovery',
-          path: '/discovery',
-          // icon: 'shopping-cart',
-          title: '发现'
+          id:2,
+          name: "Discovery",
+          path: "/discovery",
+          title: "发现",
+          icon:'iconfont iconfind'
         },
         {
-          name: 'Mine',
-          path: '/mine',
-          // icon: 'user',
-          title: '我的'
+          id:3,
+          name: "Mine",
+          path: "/mine",
+          title: "我的",
+          icon:'iconfont iconmine'
         }
-      ],
-      current:'Home'
-    }
-    // 改变This指向
-    // this.handleClick = this.handleClick.bind(this);
+      ]
+    };
   }
-  render(){
+  handleClick(url,id){
+    this.props.history.push(url);
+    this.state.currentItem = id;
+  }
+
+  render() {
     return (
-      <div className="App">
-        <Home/>
-        <Product/>
-        <Discovery/>
-        <Mine/>
-      </div>
+      <section className="app">
+      {/* 路由配置 */}
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/product" component={Product} />
+          <Route path="/discovery" component={Discovery} />
+          <Route path="/mine" component={Mine} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/404" render={() => <div>oh no 404</div>} />
+          <Redirect from="/" to="/home" exact />
+          <Redirect from="/*" to="/404" />
+        </Switch>
+
+        {/* foot导航 */}
+        <footer className="app_foot">
+          <nav>
+            {this.state.navs.map(item => {
+              return (
+                <li
+                  className="list_item"
+                  key={item.id}
+                  onClick={this.handleClick.bind(this,item.path,item.id)}
+                >
+                  <a href="javascript:;" className={this.state.currentItem === item.id?'active':''}>
+                    <i className={item.icon} />
+                    <span>{item.title}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </nav>
+        </footer>
+      </section>
     );
   }
-  
 }
 
+App = withRouter(App);
 export default App;

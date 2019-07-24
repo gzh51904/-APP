@@ -7,7 +7,7 @@ class Home extends React.Component{
     render(){
         return(
             <div>
-                home
+                home我的撒发射点
             </div>
         )
     }

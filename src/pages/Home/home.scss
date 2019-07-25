@@ -1,0 +1,144 @@
+
+// 首页导航
+.homenav{
+  display: flex;
+  width: 100%;
+  // justify-content: space-between;
+  dl{
+    width: 25%;
+    height: 1.906667rem;
+    img{
+      margin-top: .373333rem;
+      margin-left: 1.04rem;
+      margin-bottom: .266667rem;
+      width: .626667rem;
+      height: .626667rem;
+      
+    }
+    dd{
+      font-size: .266667rem;
+      margin-left: .8rem;
+    }
+  }
+}
+
+
+// 分割线
+.splitline{
+  width: 100%;
+  height: .16rem;
+  background: #F2F2F2;
+}
+
+
+
+// 首页成交量
+.home_turnover{
+  width: 100%;
+  height: 1.893333rem;
+  background: url(../../assets/homeimg/home_turnover.jpg) no-repeat;
+  // background-size: cover;
+  background-size:100% 100%;
+}
+
+
+// 首页公告
+.home_notice{
+  width: 100%;
+  height: 1.026667rem;
+  padding-top: .346667rem;
+  padding-left: .626667rem;                                                                                                                                                         
+  i{
+    display: inline-block;
+    width: .373333rem;
+    height: .306667rem;
+    background: url(../../assets/homeimg/home_notice.jpg) no-repeat;
+    background-size: cover;
+    
+  }
+  span{
+    font-size: .32rem;
+    font-weight: 800;
+    margin-left: .173333rem;
+  }
+}
+
+
+// 新人专享
+.home_rookie{
+  width: 100%;
+  height: 3.746667rem;
+  padding: .613333rem 0 0 .626667rem;
+  span{
+    font-size: .373333rem;
+    vertical-align: top;
+    margin-right: .2rem;
+  }
+  i{
+    display: inline-block;
+    width: 1.84rem;
+    height: .453333rem;
+    background: url(../../assets/homeimg/Rookie1.jpg) no-repeat;
+    background-size: 100% 100%;
+    margin-top: .053333rem;
+
+  }
+  h3{
+    color: #F7675F;
+    font-size: .88rem;
+    text-align: center; 
+    margin-bottom: .68rem;
+    span{
+      vertical-align: bottom;
+    }
+   
+  }
+  .rookie_notice{
+    height: .426667rem;
+    
+    span{
+      font-size: .293333rem;
+      color:#6C6C6C;
+      margin-right: 1.333333rem;
+      i{
+        display: inline-block;
+        width: .4rem;
+        height: .426667rem;
+        background: url(../../assets/homeimg/Rookie3.jpg) no-repeat;
+        background-size: 100% 100%;
+        margin-top: -.013333rem;
+        margin-right: .093333rem;
+      }
+    }
+    .firstspan{
+      margin-left: .12rem;
+      i{
+        background: url(../../assets/homeimg/Rookie2.jpg) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .lastspan{
+      margin-right: 0;
+      i{
+        background: url(../../assets/homeimg/Rookie4.jpg) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+
+
+// Logo
+.home_logo{
+  width: 100%;
+  height: 2.68rem;
+  background: url(../../assets/homeimg/homelogo.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+
+
+

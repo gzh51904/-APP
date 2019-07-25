@@ -8,6 +8,7 @@ import Notice from './Notice'
 import Rookie from './Rookie'
 import Rookietwo from './Rookietwo'
 import Logo from './Logo'
+import News from './News'
 import "./home.scss"
 
 
@@ -33,6 +34,7 @@ class Home extends Component{
                 <Split />
                 <Rookietwo />
                 <Logo />
+                <News />
             </section>
         )
     }

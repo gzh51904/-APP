@@ -137,6 +137,41 @@
   background-size: 100% 100%;
 }
 
+.home_news{
+  padding-top: .56rem;
+  h3{
+    margin-left: .52rem;
+    font-size: .426667rem;
+    font-weight: 800;
+    color: #303030;
+    margin-bottom: .373333rem;
+  }
+  ul{
+    width: 100%;
+    padding-left: .106667rem;
+    li{
+      height: 2.56rem;
+      border-bottom:.013333rem solid #F1F1F1;
+      width: 100%;
+      padding-top: .4rem;
+      img{
+        width: 2.666667rem;
+        height: 1.786667rem;
+        margin-left: .506667rem;
+      }
+      span{
+        display: inline-block;
+        height: 1.786667rem;
+        line-height: .173333rem;
+        margin-left: .293333rem;
+        font-size: .346667rem;
+      }
+    }
+  }
+ 
+  
+}
+
 
 
 

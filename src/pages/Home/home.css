@@ -110,3 +110,35 @@
   background: url(../../assets/homeimg/homelogo.jpg) no-repeat;
   background-size: 100% 100%;
 }
+.home_news {
+  padding-top: 0.56rem;
+}
+.home_news h3 {
+  margin-left: 0.52rem;
+  font-size: 0.426667rem;
+  font-weight: 800;
+  color: #303030;
+  margin-bottom: 0.373333rem;
+}
+.home_news ul {
+  width: 100%;
+  padding-left: 0.106667rem;
+}
+.home_news ul li {
+  height: 2.56rem;
+  border-bottom: 0.013333rem solid #f1f1f1;
+  width: 100%;
+  padding-top: 0.4rem;
+}
+.home_news ul li img {
+  width: 2.666667rem;
+  height: 1.786667rem;
+  margin-left: 0.506667rem;
+}
+.home_news ul li span {
+  display: inline-block;
+  height: 1.786667rem;
+  line-height: 0.173333rem;
+  margin-left: 0.293333rem;
+  font-size: 0.346667rem;
+}

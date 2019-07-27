@@ -9,7 +9,8 @@ import Rookie from './Rookie'
 import Rookietwo from './Rookietwo'
 import Logo from './Logo'
 import News from './News'
-import "./home.scss"
+import Homelast from './Homelast'
+import "./hqome.scss"
 
 
 
@@ -35,6 +36,7 @@ class Home extends Component{
                 <Rookietwo />
                 <Logo />
                 <News />
+                <Homelast />
             </section>
         )
     }

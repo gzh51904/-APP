@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+const axios = require('axios')
+
 
 class Rookietwo extends Component {
 
@@ -21,10 +22,12 @@ class Rookietwo extends Component {
                 return err
             }
         )
+
+                console.log(data);
         this.setState({
             content: data.data.data
         })
-        console.log(data);
+
 
     }
     // 新人专享

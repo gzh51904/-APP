@@ -31,8 +31,8 @@ class Home extends Component{
                 <Split />
                 <Notice />
                 <Split />
-                <Rookie />
-                <Split />
+                {/* <Rookie />
+                <Split /> */}
                 <Rookietwo />
                 <Logo />
                 <News />

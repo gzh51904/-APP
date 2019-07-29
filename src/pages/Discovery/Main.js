@@ -1,5 +1,5 @@
 import React,{Component}  from 'react';
-const axios = require('axios');
+
 class main extends Component{
     constructor(){
         super();
@@ -18,7 +18,7 @@ class main extends Component{
             <ul className="list-ul">
                 <li>
                     <p className="fl lie-p">
-                    <img src={require("../../assets/mineimg/b1.png")}/>
+                    <img src={require("../../assets/mineimg/b1.png")} alt="图片"/>
                     </p>
                     <div>
                     <p className="fl lie-p2">    
@@ -27,11 +27,11 @@ class main extends Component{
                     <p className="lie-p3">
                     <span className="fl">财富3000问  07-22</span>
                     <span className="fr">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     2
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     53
                     </span>
                     </p>
@@ -39,7 +39,7 @@ class main extends Component{
                 </li>
                 <li>
                     <p className="fl lie-p">
-                    <img src={require("../../assets/mineimg/b2.png")}/>
+                    <img src={require("../../assets/mineimg/b2.png")} alt="图片"/>
                     </p>
                     <div>
                     <p className="fl lie-p2">    
@@ -48,11 +48,11 @@ class main extends Component{
                     <p className="lie-p3">
                     <span className="fl">财富3000问  07-19</span>
                     <span className="fr">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     19
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     435
                     </span>
                     </p>
@@ -60,7 +60,7 @@ class main extends Component{
                 </li>
                 <li>
                     <p className="fl lie-p">
-                    <img src={require("../../assets/mineimg/b3.png")}/>
+                    <img src={require("../../assets/mineimg/b3.png")} alt="图片"/>
                     </p>
                     <div>
                     <p className="fl lie-p2">    
@@ -69,11 +69,11 @@ class main extends Component{
                     <p className="lie-p3">
                     <span className="fl">财富3000问  07-17</span>
                     <span className="fr">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     10
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     60
                     </span>
                     </p>

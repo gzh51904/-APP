@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import Head from "./Head.js";
-import Head_top from "./Head_top.js";
+import HeadTop from "./HeadTop.js";
 import Main from "./Main.js";
 import Main2 from "./Main2.js";
 import Main3 from "./Main3.js";
@@ -18,7 +18,7 @@ class Discovery extends Component{
         return(
             <section className="app_discovery">
                      <Head/>
-                     <Head_top/>
+                     <HeadTop/>
                      <Main/>
                      <Main2/>
                      <Main3/>

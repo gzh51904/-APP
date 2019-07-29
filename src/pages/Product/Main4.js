@@ -1,19 +1,50 @@
-import React from "react";
+import React,{Component} from "react";
 // import "../../assets/iconfont/iconfont.css";
+const axios = require('axios');
 
-function listMine2() {
+
+class listMine4 extends Component{
+    constructor(){
+        super();
+        this.state = {
+            content: []
+        }
+    }
+    async componentDidMount() {
+        let data =[];
+        data = await axios.get('http://localhost:1904/sirendingzhi').then(
+            (res) => {
+            return res
+         }).catch(
+            (err)=>{
+                return err
+            }
+        )
+        this.setState({
+
+            content: data.data.data
+            
+        })
+        // console.log(data)
+    }
+
+    render(){
     return (
         <main className="list-box" >
-            <ul className="mana-detail-list" style={{marginTop:"1.146667rem"}}>
-                <li className="mana-child-li delay">
-                    <a alt="跳转详情页" href="">
+            <ul className="mana-detail-list">
+            {this.state.content.map((item,idx)=>{
+                    return(
+                <li className="mana-child-li delay" key={idx}>
+                    
                         <div className="mana-list-t clearfix">
-                            <p className="fl">C 用于从事路修...
-                            <span class="syfslist">还本付息</span>
-                            <span class="syfslist">封90天</span>
+                            <p className="fl" style={{width:"8.2rem"}}><span style={{fontWeight:"bold"}}>{item.creditImg}</span>
+                            <span style={{marginLeft:".16667rem"
+                        }}>{item.title}</span>
+                            <span className="syfslist">还本付息</span>
+                            <span className="syfslist">封90天</span>
                             </p>
                          
-                            <i class="select-btn  arrow" data-id="Mt3p1YObPiU="></i>
+                            <i className="select-btn  arrow" data-id="Mt3p1YObPiU="></i>
                         </div>
                         <div className="mana-buy-list">
                             <ol className="mana-list-ol clearfix">
@@ -28,7 +59,7 @@ function listMine2() {
                                     <p className="mana-num2">借款期限（月）</p>
                                 </li>
                                     <li style={{width: '30%'}}>
-                                    <p className="mana-color-black"><span className="mana-ol-num1" style={{marginLeft:'1.633rem'}}>4.84</span></p>
+                                    <p className="mana-color-black"><span className="mana-ol-num1" style={{marginLeft:'1.633rem'}}>{item.surplusAmount}</span></p>
                                     <p className="mana-num2"><span style={{marginLeft:'.433rem'}}>剩余可投 (万元) </span></p>
                                 </li>
                                 {/* <li className="clearfix" style={{width: '30%'}}>
@@ -36,13 +67,15 @@ function listMine2() {
                                 </li> */}
                             </ol>
                         </div>
-                    </a>
+                    
                 </li>
-                {/* 2li */}
-      
+               
+                )
+            })}
                 
             </ul>
         </main>
     );
+      }
 }
-export default listMine2;
+export default listMine4;

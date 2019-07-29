@@ -37,8 +37,8 @@ class listMine extends Component{
                 {this.state.content.map((item,idx)=>{
                     return(
              
-                <li className="mana-child-li delay" >
-                    <a alt="跳转详情页" href="">
+                <li className="mana-child-li delay" key={idx}>
+                   
                         <div className="mana-list-t clearfix">
                             <p className="fl">{item.title}</p>
                             <p className="fl">剩余可投:<span>{item.surplusAmount}</span></p>
@@ -60,7 +60,7 @@ class listMine extends Component{
                                 </li>
                             </ol>
                         </div>
-                    </a>
+                 
                 </li>
                 )
                  })}

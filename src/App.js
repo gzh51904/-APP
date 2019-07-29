@@ -50,7 +50,7 @@ class App extends Component {
   handleClick(url,id){
     this.props.history.push(url);
     this.state.currentItem = id;
-    console.log(this.props)
+    // console.log(this.props)
   }
 
   render() {

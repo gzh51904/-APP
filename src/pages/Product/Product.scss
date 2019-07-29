@@ -6,6 +6,7 @@
 }
 //头部
 .mana-head {
+  z-index: 50;
   position: fixed;
   width: 100%;
   background: #fff;
@@ -46,10 +47,12 @@
   color: #f84d4d;
 }
 .mana-detail-list{
-  margin-top: 1.146667rem;
+  margin-top: 1.28rem;
   border-top: .013333rem solid #f6f6f6;
+  overflow: hidden;
 }
 .mana-detail-list > .mana-child-li {
+  overflow: hidden;
   width: 100%;
   margin-bottom: 0.213333rem;
   display: block;

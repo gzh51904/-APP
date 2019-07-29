@@ -9,7 +9,7 @@ function main2(){
             <ul>
                 <li>
                     <p className="lie-g">
-                    <img src={require("../../assets/mineimg/g1.png")}/>
+                    <img src={require("../../assets/mineimg/g1.png")} alt="图片"/>
                     </p>
                 </li>
             </ul>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import {withRouter } from 'react-router-dom';
 
 
 // import "../../assets/iconfont/iconfont.css";
@@ -36,50 +36,25 @@ class head extends Component {
                 title: "私人定制",
             },]
         };
-        // this.hanClick = this.hanClick.bind(this)
     }
-    // handleClick(event) {
-    //     this.setState({
-    //         currentIndex: parseInt(event.currentTarget.getAttribute('index'))
-    //     })
-    // }
     hanClick(url,idx) {
         // console.log(this.state)
         // this.state.currentItem = idx;
         this.props.history.push('/product'+ url);
-        // console.log(url)
-        // console.log(this.state.currentItem )
-        // console.log(this.props)
+
         this.setState({
             currentItem : idx
         })
-        // this.setState({
-        //           current:data.key,
-        //         })
     }
-    // handleClick(data){
-    //     console.log(data);
-    //     this.setState({
-    //       current:data.key,
-    //     })
-
-    //     // 路由跳转
-    //     // 获取点击的路由路径
-    //     let currentRouter = this.state.nav.filter(item=>item.name===data.key)[0];
-    //     this.props.history.push(currentRouter.path);
-    //     console.log(this.props);
-    //   }
-
     render() {
         // console.log('App.props', this.props)
         return (
             <header className="header">
                 <ul className="mana-head clearfix">
-                    {this.state.nav.map(item => {
+                    {this.state.nav.map((item,idx) => {
 
                         return (
-                            <li style={{ width: '25%' }} 
-                            key={item.idx} 
+                            <li style={{ width: '25%' }} key={idx} 
                             onClick={this.hanClick.bind(this,item.path,item.idx)} 
                             className={this.state.currentItem === item.idx ? 'active' : ''}
                             >

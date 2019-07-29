@@ -1,6 +1,15 @@
-import React from 'react';
-function main(){
-    return(
+import React,{Component}  from 'react';
+const axios = require('axios');
+class main extends Component{
+    constructor(){
+        super();
+        this.state = {
+            list: []
+        }
+    }
+
+    render(){
+        return(
         <footer className="discovery-main">
             <p className="main-p">
                 <span className="fl size">风险教育</span>
@@ -73,5 +82,8 @@ function main(){
             </ul>
         </footer>
     );
+    
+        }
+
 }
 export default main

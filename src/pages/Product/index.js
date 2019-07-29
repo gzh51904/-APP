@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { Route, Switch,Redirect} from "react-router-dom";
 import Head from "./Head.js";
 import Mine from "./Main.js";
+import Mine2 from "./Main2.js";
+import Mine3 from "./Main3.js";
+import Mine4 from "./Main4.js";
+
 import './Product.scss'
 class Product extends Component {
     constructor() {
@@ -13,7 +18,18 @@ class Product extends Component {
         return (
             <section className="app_product">
                  <Head />
-                 <Mine />
+                 <main>
+                     
+                 <Switch>
+                 <Route path="/product/main" component={Mine} />
+                 <Route path="/product/main2" component={Mine2} />
+                 <Route path="/product/main3" component={Mine3} />
+                 <Route path="/product/main4" component={Mine4} />
+                 <Redirect from="/product" to="/product/main" exact />
+            
+                 </Switch>
+                 </main>
+                
             </section>
 
         );

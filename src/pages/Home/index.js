@@ -10,7 +10,7 @@ import Rookietwo from './Rookietwo'
 import Logo from './Logo'
 import News from './News'
 import Homelast from './Homelast'
-import "./hqome.scss"
+import "./home.scss" 
 
 
 

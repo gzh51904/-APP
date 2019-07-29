@@ -1,4 +1,11 @@
 import React,{Component} from 'react';
+import Head from "./Head.js";
+import Head_top from "./Head_top.js";
+import Main from "./Main.js";
+import Main2 from "./Main2.js";
+import Main3 from "./Main3.js";
+import Main4 from "./Main4.js";
+import "./discovery.scss";
 class Discovery extends Component{
     constructor(){
         super();
@@ -9,7 +16,14 @@ class Discovery extends Component{
 
     render(){
         return(
-            <section className="app_discovery">发现</section>
+            <section className="app_discovery">
+                     <Head/>
+                     <Head_top/>
+                     <Main/>
+                     <Main2/>
+                     <Main3/>
+                     <Main4/>
+                </section>
         )
     }
 }

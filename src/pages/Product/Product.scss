@@ -1,0 +1,126 @@
+.header {
+  // color: #878787;
+  background: #f6f6f6;
+  font-family: "黑体",PINGFANG-REGULAR, Arial, Helvetica, "苹方常规", sans-serif; 
+}
+//头部
+.mana-head {
+  width: 100%;
+  background: #fff;
+  // position: fixed;
+  // top: 0;
+  // z-index: 100;
+  li {
+    height: 1.2rem;
+    text-align: center;
+    line-height: 1.2rem;
+    float: left;
+    // color: #333;
+    background: #fff;
+    p {
+      height: 1.146667rem;
+      line-height: 1.146667rem;
+      font-size: 0.4rem;
+      // color: #333333;
+    }
+     span {
+      display: none;
+      height: 0.053333rem;
+      background-color: #fc4849;
+      border-radius: 2px;
+      margin: 0 auto;
+      width: 0.496667rem;
+
+  }
+  .span2{
+    display: block;
+  }
+  }
+ .active{
+      color: #f84d4d;
+		}
+}
+
+.mana-detail-list > .mana-child-li {
+  width: 100%;
+  margin-bottom: 0.213333rem;
+  display: block;
+  height: 3.2763rem;
+  background-color: #fff;
+  .mana-list-t,
+  .mana-buy-list,
+  .mana-plus {
+    // width: calc(100% - 0.88rem);
+    padding: 0 0.44rem;
+    background: #fff;
+    height: 1.2894rem;
+    margin-top: 0.2rem;
+    .fl {
+      width: calc(100% / 2);
+      float: left;
+      line-height: 1.2rem;
+      font-size: 0.346667rem;
+      color: #333;
+    }
+    p:nth-child(1) {
+      text-align: left;
+      width: 55%;
+    }
+    p:nth-child(2) {
+      text-align: right;
+      color: #6e6e6e;
+      font-size: 0.32rem;
+      width: 45%;
+      span {
+        font-size: 0.32rem;
+      }
+    }
+    .mana-list-ol li {
+      float: left;
+      width: 33.33333%;
+      text-align: left;
+      padding-bottom: 0.45rem;
+      margin-bottom: 0.213333rem;
+      .mana-color-red {
+        color: #f84d4d;
+      }
+      p {
+        width: 100%;
+        height: 0.666667rem;
+        font-size: 0.293333rem;
+        line-height: 0.666667rem;
+        text-align: left;
+        color: #6e6e6e;
+        margin-bottom: 0.1rem;
+        .mana-ol-num1 {
+          font-size: 0.5789rem;
+        }
+        .mana-ol-num2 {
+          font-size: 0.32rem;
+          margin-left: 4px;
+        }
+      }
+      .mana-color-black {
+        text-align: center;
+        color: #333;
+      }
+      .mana-num2{
+        text-align: center;
+      }
+      .mana-buy-btn {
+
+        width: 1.786667rem;
+        height: 0.746667rem;
+        text-align: center;
+        line-height: 0.746667rem;
+        background: #f84d4d;
+        color: #fff;
+        border-radius: 0.093333rem;
+        float: right;
+        font-size: 0.4rem;
+    
+    }
+    }
+
+  }
+}

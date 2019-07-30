@@ -20,6 +20,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      currentItem:0,
       navs: [
         {
           name: 'Home',
@@ -49,15 +50,40 @@ class App extends React.Component {
       current:'Home'
     }
     // 改变This指向
-    // this.handleClick = this.handleClick.bind(this);
+    handleClick(url,id){
+      this.props.history.push(url);
+      this.state.currentItem = id;
+    }
   }
   render(){
     return (
       <div className="App">
-        <Home/>
-        <Product/>
-        <Discovery/>
-        <Mine/>
+        {/* 路由配置 */}
+        <Switch>
+          <Route path='/home' component={Home}/>
+          <Route path='product' component={Product}/>
+          <Route path='discovery' component={Discovery}/>
+          <Route path='mine' component={Mine}/>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path='/404' render={()=><div>oh shit!404</div>}/>
+          <Redirect from="/" to="/home"/>
+          <Redirect from='/*' to='/404'/>
+        </Switch>
+        {/* 导航 */}
+        <nav>
+          {
+            this.state.navs.map(item=>{
+              return (
+                <li key={item.id}>
+                  <a>
+
+                  </a>
+                </li>
+              )
+            })
+          }
+        </nav>
       </div>
     );
   }

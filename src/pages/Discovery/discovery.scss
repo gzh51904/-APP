@@ -1,0 +1,182 @@
+
+.app_discovery{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    font-family: "黑体",PINGFANG-REGULAR, Arial, Helvetica, "苹方常规", sans-serif; 
+.header {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 1.4rem;
+    border-bottom: .026667rem solid #f2f2f2;
+    .header_inner {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+  
+        .title {
+            height: .533333rem;
+            font-size: .453333rem;
+            color: #000;
+            line-height: .533333rem;
+        }
+    }
+
+}
+
+//头部选项
+    .menu-top{
+        // display: flex;
+        margin-top: 1.4rem;
+        width: 100%;
+        // height: ;
+        height: 2.373333rem;
+        // flex-direction: column;
+        border-bottom: .026667rem solid #f2f2f2;
+        .menu-mian li{
+            width: 25%;
+            height: 100%;
+            float: left;
+            img{
+                width: 1.173333rem;
+                height: 1.173333rem;
+                margin-left: .733333rem;
+                margin-top: .32rem;
+            }
+            p{
+                font-size: .293333rem;
+                margin-left: .733333rem;
+                margin-top: .186667rem;
+            }
+        }
+    }
+
+//主要内容1
+    .discovery-main{
+        width: 100%;
+        height: 8.8rem;
+        border-bottom: .266667rem solid #f2f2f2;
+       .main-p{
+            margin-top: .466667rem;
+            margin-left: .466667rem;
+          
+            height: .5rem;
+            .size{
+                font-size: .4rem;
+                font-weight: bold;
+                color: #333333;
+                img{
+                    width: .44rem;
+                    height: .586667rem;
+                    margin-top: -0.16rem
+                }
+                em{
+                    margin-left: .133333rem;
+                    font-weight: bold;
+                }
+           
+            }
+            .size2{
+                font-size: .32rem;
+                color: #7c7c7c;
+                margin-right: .48rem;
+            }
+        }
+        ul{
+            overflow: hidden;
+            // margin-left: .466667rem;
+        
+            width: 100%;
+         
+            li{
+                padding-left: .466667rem;
+                margin-top: .56rem;
+                .lie-p{
+                    // display: inline-block;
+                    img{
+                        width: 1.866667rem;
+                        height: 1.866667rem;
+                    }
+                }
+                div{
+                    display: inline-block;
+                    height: 1.8rem;
+                    margin-left: .333333rem;
+                    .lie-p2{
+                        // display: inline-block;
+                        width: 6.466667rem;
+                        height: .933333rem;
+                        font-size: .386667rem;
+                        color: #333333;
+                        margin-top: .053333rem;
+                    }
+                    .lie-p3{
+                        margin-top: 1.44rem;
+                        span{
+                            font-size: .266667rem;
+                            color: #b4acab;
+                            img{
+                                width: .373333rem;
+                                height: .293333rem;
+                                margin-right: .16rem;
+                            }
+                        }
+                        .sp2{
+                            margin-right: .493333rem;
+                        }
+                    }
+
+                }
+              
+                
+            }
+        }
+      
+    }
+
+    //主要内容2
+    .discovery-main{
+          
+            .lie-g img{
+                height: 4.533333rem;
+                width: 9.093333rem;
+            }
+            .list-1{
+                // height: 2.106667rem;
+                height: 1.64rem;
+                border-bottom: .026667rem solid #f2f2f2;
+                h3{
+                    margin-top: .466667rem;
+                    font-size: .373333rem;
+                    font-weight: bold;
+
+                }
+                .lie-p3{
+                        margin-top: .666667rem;
+                        span{
+                            font-size: .266667rem;
+                            color: #b4acab;
+                            img{
+                                width: .373333rem;
+                                height: .293333rem;
+                                margin-right: .16rem;
+                            }
+                        }
+                        .sp2{
+                            margin-right: .493333rem;
+                        }
+                    }
+            }
+            .list-9{
+                border: none;
+            }
+    }
+
+
+
+}

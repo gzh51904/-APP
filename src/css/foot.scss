@@ -1,0 +1,59 @@
+.app_foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.333333rem;
+    background: #f8f8f8;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .list_item {
+            flex: 1;
+            height: 100%;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            .active {
+                i {
+                    color: red;
+                }
+
+                span {
+                    color: red;
+                }
+
+            }
+
+            i {
+                font-size: .506667rem;
+                color: #000;
+                margin-bottom: .146667rem;
+            }
+
+
+            span {
+                font-size: .253333rem;
+                color: #000;
+
+            }
+        }
+    }
+
+}

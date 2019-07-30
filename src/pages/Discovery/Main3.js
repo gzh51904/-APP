@@ -15,11 +15,11 @@ function main3(){
                     <p className="lie-p3">
                     <span className="fl">2019-07-01</span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     823
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     62186
                     </span>
                     </p>
@@ -29,11 +29,11 @@ function main3(){
                     <p className="lie-p3">
                     <span className="fl">2019-07-17</span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     17
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     1714
                     </span>
                     </p>
@@ -43,11 +43,11 @@ function main3(){
                     <p className="lie-p3">
                     <span className="fl">2019-07-01</span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     2
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     53
                     </span>
                     </p>

@@ -1,9 +1,7 @@
 import React,{Component} from "react";
 // import "../../assets/iconfont/iconfont.css";
 const axios = require('axios');
-
-
-class listMine extends Component{
+class listMine2 extends Component{
     constructor(){
         super();
         this.state = {
@@ -12,7 +10,7 @@ class listMine extends Component{
     }
     async componentDidMount() {
         let data =[];
-        data = await axios.get('http://localhost:1904/enjoy').then(
+        data = await axios.get('http://localhost:1904/plan').then(
             (res) => {
             return res
          }).catch(
@@ -25,20 +23,16 @@ class listMine extends Component{
             content: data.data.data
             
         })
-        console.log(data)
+        // console.log(data)
     }
-
-
     render(){
-
     return (
         <main className="list-box" >
             <ul className="mana-detail-list">
-                {this.state.content.map((item,idx)=>{
+            {this.state.content.map((item,idx)=>{
                     return(
-             
                 <li className="mana-child-li delay" key={idx}>
-                   
+                  
                         <div className="mana-list-t clearfix">
                             <p className="fl">{item.title}</p>
                             <p className="fl">剩余可投:<span>{item.surplusAmount}</span></p>
@@ -53,21 +47,20 @@ class listMine extends Component{
                                 </li>
                                 <li style={{width: '30%'}}>
                                     <p className="mana-color-black"><span className="mana-ol-num1">{item.time}</span></p>
-                                    <p className="mana-num2">锁定期（月）</p>
+                                    <p className="mana-num2">锁定期（天）</p>
                                 </li>
                                 <li className="clearfix" style={{width: '30%'}}>
                                     <p className="mana-buy-btn wmps-sub" style={{marginTop: '0.32rem'}}>出借</p>
                                 </li>
                             </ol>
                         </div>
-                 
-                </li>
-                )
-                 })}
+                   
+                </li> 
+                    )
+            })}              
             </ul>
         </main>
-
     );
+    }
 }
-}
-export default listMine;
+export default listMine2;

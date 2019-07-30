@@ -50,10 +50,9 @@ Router.route('/')
 
     // res.send(JSON.stringify(req));
 
-    query('select * from zixun limit 1' + ';select * from newcomer where allow = "Y" limit 2').then(function(data){
+    query('select * from zixun limit 4' + ';select * from newcomer where allow = "Y" limit 2').then(function(data){
         // data: promise对象改成resolve状态时传回的参数
         res.send(formatData({data}))
-        console.log(data)
     },(err)=>{
         res.send(formatData({data:err,code:250}))
     })

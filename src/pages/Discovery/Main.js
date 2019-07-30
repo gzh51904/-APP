@@ -1,6 +1,15 @@
-import React from 'react';
-function main(){
-    return(
+import React,{Component}  from 'react';
+
+class main extends Component{
+    constructor(){
+        super();
+        this.state = {
+            list: []
+        }
+    }
+
+    render(){
+        return(
         <footer className="discovery-main">
             <p className="main-p">
                 <span className="fl size">风险教育</span>
@@ -9,7 +18,7 @@ function main(){
             <ul className="list-ul">
                 <li>
                     <p className="fl lie-p">
-                    <img src={require("../../assets/mineimg/b1.png")}/>
+                    <img src={require("../../assets/mineimg/b1.png")} alt="图片"/>
                     </p>
                     <div>
                     <p className="fl lie-p2">    
@@ -18,11 +27,11 @@ function main(){
                     <p className="lie-p3">
                     <span className="fl">财富3000问  07-22</span>
                     <span className="fr">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     2
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     53
                     </span>
                     </p>
@@ -30,7 +39,7 @@ function main(){
                 </li>
                 <li>
                     <p className="fl lie-p">
-                    <img src={require("../../assets/mineimg/b2.png")}/>
+                    <img src={require("../../assets/mineimg/b2.png")} alt="图片"/>
                     </p>
                     <div>
                     <p className="fl lie-p2">    
@@ -39,11 +48,11 @@ function main(){
                     <p className="lie-p3">
                     <span className="fl">财富3000问  07-19</span>
                     <span className="fr">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     19
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     435
                     </span>
                     </p>
@@ -51,7 +60,7 @@ function main(){
                 </li>
                 <li>
                     <p className="fl lie-p">
-                    <img src={require("../../assets/mineimg/b3.png")}/>
+                    <img src={require("../../assets/mineimg/b3.png")} alt="图片"/>
                     </p>
                     <div>
                     <p className="fl lie-p2">    
@@ -60,11 +69,11 @@ function main(){
                     <p className="lie-p3">
                     <span className="fl">财富3000问  07-17</span>
                     <span className="fr">
-                    <img src={require("../../assets/mineimg/a2.png")}/>
+                    <img src={require("../../assets/mineimg/a2.png")} alt="图片"/>
                     10
                     </span>
                     <span className="fr sp2">
-                    <img src={require("../../assets/mineimg/a1.png")}/>
+                    <img src={require("../../assets/mineimg/a1.png")} alt="图片"/>
                     60
                     </span>
                     </p>
@@ -73,5 +82,8 @@ function main(){
             </ul>
         </footer>
     );
+    
+        }
+
 }
 export default main

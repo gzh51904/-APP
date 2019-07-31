@@ -13,7 +13,7 @@ class Register extends Component {
   }
   render() {
     return (
-      <section className="app_register">
+      <section className="app_register" style={{background: '#fff'}}>
         <Back/>
         <Title/>
         {/* <Head /> */}

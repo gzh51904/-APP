@@ -35,9 +35,9 @@ class Rookietwo extends Component {
         return (
             <div>
                 {
-                    this.state.content.map(item => {
+                    this.state.content.map((item,index) => {
                         return (
-                            <div className="home_rookie">
+                            <div key={index} className="home_rookie">
                                 <p><span>{item.titel}</span><i></i></p>
                                 <h3>{item.rate}<span>%</span></h3>
                                 <p className="rookie_notice">

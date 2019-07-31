@@ -1,6 +1,6 @@
 {
     "PORT":1904,
     "mongourl":"mongodb://localhost:27017",
-    "dbname":"yilong-app",
+    "dbname":"h5db",
     "pKey":"dingding"
 }

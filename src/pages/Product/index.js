@@ -5,7 +5,7 @@ import Mine from "./Main.js";
 import Mine2 from "./Main2.js";
 import Mine3 from "./Main3.js";
 import Mine4 from "./Main4.js";
-
+import xiangqin from "../xiangqin/index";
 import './Product.scss'
 class Product extends Component {
     constructor() {

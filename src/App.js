@@ -64,6 +64,7 @@ class App extends Component {
           <Route path="/mine" component={Mine} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+
           {/* <Route path="/404" render={() => <div>oh no 404</div>} /> */}
           <Redirect from="/" to="/home" exact />
           {/* <Redirect from="/*" to="/404" /> */}

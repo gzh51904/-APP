@@ -11,7 +11,12 @@ import Discovery from "./pages/Discovery/index"; //发现
 import Mine from "./pages/Mine/index"; //我的
 import Login from "./pages/Login/index";
 import Register from "./pages/Register/index"; //注册
+<<<<<<< HEAD
 import Detail from "./pages/Detail/index";//详情
+=======
+import xiangqin from "./pages/xiangqin/index"; //xiangqin
+import chujie from "./pages/chujie/index";
+>>>>>>> 1fb86c618aa612ddac625bee3c9f2a54dba719d3
 
 import "./assets/css/base.css";
 import "./css/foot.scss";
@@ -64,6 +69,7 @@ class App extends Component {
     let {footShow} = this.props;
     return (
       <section className="app">
+<<<<<<< HEAD
         {/* 路由配置 */}
         {/* <Provider store={store}> */}
           <Switch>
@@ -79,6 +85,22 @@ class App extends Component {
             <Redirect from="/*" to="/404" />
           </Switch>
         {/* </Provider> */}
+=======
+      {/* 路由配置 */}
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/product" component={Product} />
+          <Route path="/discovery" component={Discovery} />
+          <Route path="/mine" component={Mine} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/xiangqin" component={xiangqin} />
+          <Route path="/chujie" component={chujie} />
+          <Route path="/404" render={() => <div>oh no 404</div>} />
+          <Redirect from="/" to="/home" exact />
+          <Redirect from="/*" to="/404" />
+        </Switch>
+>>>>>>> 1fb86c618aa612ddac625bee3c9f2a54dba719d3
 
         {/* foot导航 */}
         <footer className={footShow ? 'app_foot app_foot_show' : 'footShow app_foot_hide'} >

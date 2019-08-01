@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 function Rookie() {
     // 新人专享
     return (

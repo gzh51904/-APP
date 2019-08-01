@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-const axios = require('axios')
+import axios from 'axios';
+import {withRouter} from 'react-router-dom';
+import { connect } from "react-redux";
 
 class News extends Component {
     constructor() {
@@ -8,6 +10,13 @@ class News extends Component {
             content: []
         }
     }
+
+    // 详情文章
+    detail(id){
+        this.props.history.push({pathname:'/detail/' + id,state:{id:id}});
+        console.log(id);
+    }
+
     async componentDidMount() {
         let data = [];
         data = await axios.get('http://localhost:1904/zixun').then(
@@ -16,45 +25,34 @@ class News extends Component {
             }
         ).catch(
             (err) => {
-                return err
+                return err;
             }
         )
         this.setState({
             content: data.data.data
         })
-        console.log(data);
+        // console.log(data.data.data);
+        console.log(this.props.isShowFooter)
 
     }
 
 
     render() {
+        
         return (
-            <div className="home_news">
+            <div className='home_news'>
                 <h3>翼龙咨询</h3>
                 <ul>
                     {
-                        this.state.content.map(item => {
+                        this.state.content.map((item) => {
                             return (
-                                <li key={item.id} limit >
+                                <li onClick={this.detail.bind(this,item.id)} key={item.id} limit >
                                     <img src={require(`../../assets/homeimg/${item.imgurl}`)} />
                                     <span>{item.title}</span>
                                 </li>
                             )
                         })
                     }
-
-                    {/* <li>
-                        <img src={require("../../assets/homeimg/homenews2.jpg")} />
-                        <span>陆奇捷：辨证认识农村贷款风险</span>
-                    </li>
-                    <li>
-                        <img src={require("../../assets/homeimg/homenews3.jpg")} />
-                        <span>牛津大学教授到翼龙贷实地调研</span>
-                    </li>
-                    <li>
-                        <img src={require("../../assets/homeimg/homenews4.jpg")} />
-                        <span>牛津大学教授到翼龙贷实地调研</span>
-                    </li> */}
                 </ul>
             </div>
         )
@@ -62,4 +60,5 @@ class News extends Component {
 
 }
 
-export default News;
+News = withRouter(News);
+export default News

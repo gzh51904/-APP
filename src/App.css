@@ -38,3 +38,9 @@ html,body{
 .app_foot nav .list_item{
     background: #fff;
 }
+.app_foot_show{
+    display: block;
+}
+.app_foot_hide{
+    display: none;
+}

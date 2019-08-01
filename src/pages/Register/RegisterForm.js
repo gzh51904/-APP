@@ -60,6 +60,18 @@ class RegisterForm extends React.Component {
     this.props.history.push('/login');
   }
 
+  // 清空内容
+  cleanPhone(){
+    this.refs.phone.value = '';
+   
+  }
+  cleanPsw(){
+    this.refs.psw.value = '';
+  }
+  cleanRandom(){
+    this.refs.randomCd.value = ''; 
+  }
+  
   render() {
     return (
       <main className="main">
@@ -76,7 +88,7 @@ class RegisterForm extends React.Component {
               placeholder="请输入11位手机号码"
             />
             <div className="phone_clear">
-              <i className="iconfont iconic_searchclosed" />
+              <i onClick={this.cleanPhone.bind(this)} className="iconfont iconic_searchclosed" />
             </div>
           </div>
           {/* 密码 */}
@@ -91,7 +103,7 @@ class RegisterForm extends React.Component {
               placeholder="请输入密码"
             />
             <div className="phone_clear">
-              <i className="iconfont iconic_searchclosed" />
+              <i onClick={this.cleanPsw.bind(this)} className="iconfont iconic_searchclosed" />
             </div>
           </div>
           {/* 短信验证码 */}
@@ -106,7 +118,7 @@ class RegisterForm extends React.Component {
               /> */}
             <input type="text" ref="randomCd" placeholder="请输入验证码" className="sms_input" />
             <div className="sms_clear">
-              <i className="iconfont iconic_searchclosed" />
+              <i onClick={this.cleanRandom.bind(this)} className="iconfont iconic_searchclosed" />
             </div>
             <div className="sms_send">
               <div id="canvas" ref="randomC" onClick={this.randomCode.bind(this)} style={{ width: "100px", height: "80%", marginTop: '6px', lineHeight: '47px' }}>点击刷新</div>

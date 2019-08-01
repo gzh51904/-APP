@@ -44,7 +44,8 @@ class listMine4 extends Component{
                             <span className="syfslist">封90天</span>
                             </p>
                          
-                            <i className="select-btn  arrow" data-id="Mt3p1YObPiU="></i>
+                            {/* <i className="select-btn  arrow" data-id="Mt3p1YObPiU="></i> */}
+                            <input style={{margin:'19px 0 0 15px'}} type="checkbox"/>
                         </div>
                         <div className="mana-buy-list">
                             <ol className="mana-list-ol clearfix">

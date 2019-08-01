@@ -43,7 +43,7 @@ class Rookietwo extends Component {
                                 <p className="rookie_notice">
                                     <span className="firstspan"><i></i>{item.time}</span>
                                     <span><i></i>每日利息</span>
-                                    <span className="lastspan"><i></i>{item.starting}</span>
+                                    <span className="lastspan"><i></i>{item.money}</span>
                                 </p>
                             </div>
                             

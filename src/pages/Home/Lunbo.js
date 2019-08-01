@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-
 import { Carousel, WingBlank } from 'antd-mobile';
-
-
 
 export default class App extends Component {
     constructor() {
@@ -27,7 +24,7 @@ export default class App extends Component {
     // 轮播
     render() {
         return (
-            <WingBlank>
+            <WingBlank style={{minHeight:"146px"}}>
                 <Carousel autoplay infinite>
                     {this.state.data.map(val => {
                         return (

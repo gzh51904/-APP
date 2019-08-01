@@ -10,7 +10,9 @@ import Rookietwo from './Rookietwo'
 import Logo from './Logo'
 import News from './News'
 import Homelast from './Homelast'
-import "./home.scss" 
+import "./home.scss" ;
+import {withRouter} from 'react-router-dom';
+import { connect } from 'react-redux';//添加redux仓库
 
 
 
@@ -20,6 +22,12 @@ class Home extends Component{
         this.state = {
                                                                    
         }
+    }
+    componentDidMount() {
+        this.props.dispatch({
+            type: 'CHANGEHEADER',
+            headerComponent: 'home',
+        })
     }
     render(){
         return(
@@ -41,5 +49,7 @@ class Home extends Component{
         )
     }
 }
-
-export default Home;
+Home = withRouter(Home);
+export default connect((state)=>{
+    return state
+})(Home)

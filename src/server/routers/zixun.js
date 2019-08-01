@@ -152,7 +152,7 @@ Router.route('/:id')
     // });
 
 
-    query(`select * from goods where id=${id}`).then(function(data){
+    query(`select * from zixun where id=${id}`).then(function(data){
         // data: promise对象改成resolve状态时传回的参数
         res.send(formatData({data}))
     },(err)=>{

@@ -9,7 +9,8 @@ import Rookie from './Rookie'
 import Rookietwo from './Rookietwo'
 import Logo from './Logo'
 import News from './News'
-import "./home.scss"
+import Homelast from './Homelast'
+import "./home.scss" 
 
 
 
@@ -30,11 +31,12 @@ class Home extends Component{
                 <Split />
                 <Notice />
                 <Split />
-                <Rookie />
-                <Split />
-                <Rookietwo />
+                {/* <Rookie />
+                <Split /> */}
+                <Rookietwo/>
                 <Logo />
                 <News />
+                <Homelast />
             </section>
         )
     }

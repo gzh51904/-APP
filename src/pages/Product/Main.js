@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import {withRouter} from 'react-router-dom';
 // import "../../assets/iconfont/iconfont.css";
 const axios = require('axios');
 
@@ -7,8 +8,10 @@ class listMine extends Component{
     constructor(){
         super();
         this.state = {
-            content: []
+            content: [],
+        
         }
+
     }
     async componentDidMount() {
         let data =[];
@@ -21,23 +24,38 @@ class listMine extends Component{
             }
         )
         this.setState({
-
-            content: data.data.data
-            
+            content: data.data.data, 
         })
-        console.log(data)
+            //   console.log(data)
     }
+    goto(id){
 
+        console.log(this.props.history);
+  
+        // id.stopPropagation()
+        this.props.history.push({
+            'pathname':'/xiangqin/'+id,
+            state:{id:id}
+        })
+    
+        return;
+    }
+    gotocj(e){
+        this.props.history.push("/chujie")
+        e.stopPropagation();
+    }
 
     render(){
 
     return (
         <main className="list-box" >
             <ul className="mana-detail-list">
-                {this.state.content.map((item,idx)=>{
+                {this.state.content.map(item=>{
                     return(
              
-                <li className="mana-child-li delay" key={idx}>
+                <li  index={item.lend} key={item.id}
+                className={item.lend === 'n' ? 'mana-over-li' : 'mana-child-li'}
+                onClick={this.goto.bind(this,item.id)}>
                    
                         <div className="mana-list-t clearfix">
                             <p className="fl">{item.title}</p>
@@ -56,7 +74,7 @@ class listMine extends Component{
                                     <p className="mana-num2">锁定期（月）</p>
                                 </li>
                                 <li className="clearfix" style={{width: '30%'}}>
-                                    <p className="mana-buy-btn wmps-sub" style={{marginTop: '0.32rem'}}>出借</p>
+                                    <p className="mana-buy-btn wmps-sub" style={{marginTop: '0.32rem'}} onClick={this.gotocj.bind(this)}>{item.name}</p>
                                 </li>
                             </ol>
                         </div>
@@ -70,4 +88,5 @@ class listMine extends Component{
     );
 }
 }
+// listMine = withRouter(listMine);
 export default listMine;

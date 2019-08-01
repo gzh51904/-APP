@@ -50,7 +50,7 @@ Router.route('/')
 
     // res.send(JSON.stringify(req));
 
-    query('select * from newcomer').then(function(data){
+    query('select * from newcomer limit 2').then(function(data){
         // data: promise对象改成resolve状态时传回的参数
         res.send(formatData({data}))
     },(err)=>{

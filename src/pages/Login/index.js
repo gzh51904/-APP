@@ -10,7 +10,7 @@ class Login extends Component {
   }
   render() {
     return (
-      <section className="app_login">
+      <section className="app_login" style={{background: '#fff'}}>
         <Head />
         <Main />
         <Foot />

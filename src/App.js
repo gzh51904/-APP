@@ -6,6 +6,9 @@ import Discovery from "./pages/Discovery/index"; //发现
 import Mine from "./pages/Mine/index"; //我的
 import Login from "./pages/Login/index";
 import Register from "./pages/Register/index"; //注册
+import xiangqin from "./pages/xiangqin/index"; //xiangqin
+import chujie from "./pages/chujie/index";
+
 import "./assets/css/base.css";
 import "./css/foot.scss";
 import "./assets/iconfont/iconfont.css";
@@ -40,7 +43,7 @@ class App extends Component {
         {
           id:3,
           name: "Mine",
-          path: "/mine",
+          path: "/register",
           title: "我的",
           icon:'iconfont iconmine'
         }
@@ -64,10 +67,11 @@ class App extends Component {
           <Route path="/mine" component={Mine} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-
-          {/* <Route path="/404" render={() => <div>oh no 404</div>} /> */}
+          <Route path="/xiangqin" component={xiangqin} />
+          <Route path="/chujie" component={chujie} />
+          <Route path="/404" render={() => <div>oh no 404</div>} />
           <Redirect from="/" to="/home" exact />
-          {/* <Redirect from="/*" to="/404" /> */}
+          <Redirect from="/*" to="/404" />
         </Switch>
 
         {/* foot导航 */}

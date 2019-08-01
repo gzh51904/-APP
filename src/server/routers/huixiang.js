@@ -90,7 +90,7 @@ Router.route('/:id')
     let {id} = req.params;
     console.log('params:',req.params)
 
-    query(`select * from goods where id=${id}`).then(function(data){
+    query(`select * from yinonghuixiang where id=${id}`).then(function(data){
         // data: promise对象改成resolve状态时传回的参数
         res.send(formatData({data}))
     },(err)=>{

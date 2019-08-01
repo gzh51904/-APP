@@ -17,6 +17,9 @@ const huixiangRouter = require('./huixiang');
 const jihusRouter = require('./jihua');
 const zhimakaihuaRouter = require('./zhimakaihua');
 const sirendingzhiRouter = require('./sirendingzhi');
+// const adminLoginRouter = require('./adminLogin');
+const adminRouter = require('./admin');
+const appRegRouter = require('./appReg');
 
 const {formatData,token:{verify}} = require('../utils');
 
@@ -72,6 +75,9 @@ Router.use('/enjoy',huixiangRouter);//翼农惠享
 Router.use('/plan',jihusRouter);//翼农计划
 Router.use('/zhimakaihua',zhimakaihuaRouter);//芝麻开花
 Router.use('/sirendingzhi',sirendingzhiRouter);//私人定制
+// Router.use('/adminLogin',adminLoginRouter);
+Router.use('/admin',adminRouter);
+Router.use('/appReg',appRegRouter);
 
 
 
